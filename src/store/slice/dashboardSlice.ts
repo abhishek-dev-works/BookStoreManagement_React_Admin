@@ -8,13 +8,13 @@ import { IBook } from "../types/BookTypes";
 
 export const getAllFilters = createAction("records/getAllFilters");
 
-export const addMultipleRecordsForUser = createAction<MultipleRecordsCommand>(
-  "addMultipleRecordsForUser"
-);
+// export const addMultipleRecordsForUser = createAction<MultipleRecordsCommand>(
+//   "addMultipleRecordsForUser"
+// );
 
-export const updateRecordById = createAction<{ id: string; data: RecordCommand }>(
-  "updateRecordById"
-);
+// export const updateRecordById = createAction<{ id: string; data: RecordCommand }>(
+//   "updateRecordById"
+// );
 
 export const addBook = createAction<IBook>("books/addBook");
 
