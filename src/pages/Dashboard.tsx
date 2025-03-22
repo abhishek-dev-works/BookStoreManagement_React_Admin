@@ -6,10 +6,12 @@ import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import PostAddIcon from "@mui/icons-material/PostAdd";
 import RecordModal from "../components/RecordModal";
 import BookModal from "../components/BookModal";
+import UserModal from "../components/UserModal";
 
 const Dashboard = () => {
     const [openRecordModal, setOpenRecordModal] = React.useState(false);
     const [openBookModal, setOpenBookModal] = React.useState(false);
+    const [openUserModal, setOpenUserModal] = React.useState(false);
   return (
     <Box sx={{ width: "100%", height: "100vh", bgcolor: "#222725" }}>
       <Header />
@@ -21,7 +23,7 @@ const Dashboard = () => {
           py: 8
         }}
       >
-        <Button sx={{ bgcolor: "#F7F7F2", color: "black" }}>
+        <Button sx={{ bgcolor: "#F7F7F2", color: "black" }} onClick={() => setOpenUserModal(true)}>
           <PersonAddIcon /> New User
         </Button>
         <Button sx={{ bgcolor: "#F7F7F2", color: "black" }} onClick={() => setOpenBookModal(true)}>
@@ -33,6 +35,7 @@ const Dashboard = () => {
       </Box>
         <RecordModal open={openRecordModal} onClose={() => setOpenRecordModal(false)} />
         <BookModal open={openBookModal} onClose={() => setOpenBookModal(false)} />
+        <UserModal open={openUserModal} onClose={() => setOpenUserModal(false) } />
     </Box>
   );
 };
